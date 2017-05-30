@@ -44,8 +44,16 @@ max_num = int(input("Введи максимальное число = "))
 max_symb_three = 95
 max_symb_four = 87
 
+# x + y = z
 list_xyz = []
+# x + y + z = w
+list_xyzw = []
+# x + y + z + w = u
+list_xyzwu = []
+
 list_xyz_debug = []
+list_xyzw_debug = []
+list_xyzwu_debug = []
 
 i = 0
 x = 0
@@ -53,6 +61,21 @@ y = 0
 z = 0
 string = ""
 string_debug = ""
+
+list_actions_xyz = [[" + ", " = "], [" - ", " = "]]
+list_actions_xyzw = [[" + ", " + ", " = "], [" + ", " - ", " = "], [" - ", " + ", " = "], [" - ", " - ", " = "]]
+list_actions_xyzwu = [[" + ", " + ", " + ", " = "], [" + ", " + ", " - ", " = "], [" + ", " - ", " - ", " = "],
+                      [" + ", " - ", " + ", " = "], [" - ", " - ", " - ", " = "], [" - ", " - ", " + ", " = "],
+                      [" - ", " + ", " + ", " = "], [" - ", " + ", " - ", " = "]]
+
+while i < 36:
+    index_xyz = random.randint(0, len(list_actions_xyz))
+    index_xyzw = random.randint(0, len(list_actions_xyzw))
+    index_xyzwu = random.randint(0, len(list_actions_xyzwu))
+
+
+i = 0
+
 
 while i < 36:
     # z = random.randint(0, max_num)
